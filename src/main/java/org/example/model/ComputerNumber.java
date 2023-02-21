@@ -10,7 +10,15 @@ public class ComputerNumber {
     private static final int ONE = 1;
     private static final int MAX_SIZE = 3;
 
-    private List<String> computerNumbers = new ArrayList<>();
+    private List<String> computerNumbers;
+
+    private ComputerNumber() {
+        computerNumbers = new ArrayList<>();
+    }
+
+    public static ComputerNumber createNumbers() {
+        return new ComputerNumber();
+    }
 
     public List<String> getComputerNum() {
         ThreadLocalRandom random = ThreadLocalRandom.current();

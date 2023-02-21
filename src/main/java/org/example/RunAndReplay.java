@@ -29,10 +29,10 @@ public class RunAndReplay {
     }
 
     public void run() throws IOException {
-        ComputerNumber computerNum = new ComputerNumber();
+//        ComputerNumber computerNum = ComputerNumber.of();
         Distinction distinction = new Distinction();
 
-        List<String> computerNumbers = computerNum.getComputerNum();
+        List<String> computerNumbers = ComputerNumber.createNumbers().getComputerNum();
 
         while (true) {
             UserNumber userNum = new UserNumber();
